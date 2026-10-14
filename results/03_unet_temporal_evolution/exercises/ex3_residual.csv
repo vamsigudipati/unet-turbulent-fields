@@ -1,0 +1,4 @@
+model,val_mae
+direct,0.20317096881377392
+residual (input + delta),0.2057921651693491
+persistence,0.29005289542369356

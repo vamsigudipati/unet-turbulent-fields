@@ -1,0 +1,30 @@
+{
+    "model_name": "unet_u_super_resolution",
+    "model_file": "../models/01_unet_turbulent_superresolution/unet_u_super_resolution.keras",
+    "normalization_file": "../models/01_unet_turbulent_superresolution/unet_u_super_resolution_normalization.npz",
+    "task": "u velocity field super-resolution",
+    "input": "coarse/interpolated u(y,x) field",
+    "output": "high-resolution u(y,x) field",
+    "variable": "u",
+    "input_shape": [
+        208,
+        384,
+        1
+    ],
+    "output_shape": [
+        208,
+        384,
+        1
+    ],
+    "super_resolution_factor": 4,
+    "padding_multiple": 16,
+    "n_train_samples": 4043,
+    "n_val_samples": 866,
+    "n_test_samples": 868,
+    "baseline_mse": 0.0013184553245082498,
+    "baseline_mae": 0.023546777665615082,
+    "final_training_loss": 0.00023942289408296347,
+    "final_validation_loss": 0.0002807238488458097,
+    "final_training_mae": 0.009147316217422485,
+    "final_validation_mae": 0.009585987776517868
+}

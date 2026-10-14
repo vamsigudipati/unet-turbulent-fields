@@ -1,0 +1,22 @@
+{
+    "model_name": "unet_u_temporal_evolution",
+    "model_file": "../models/03_unet_temporal_evolution/unet_u_temporal_evolution.keras",
+    "task": "u velocity field temporal evolution",
+    "input": "u(y, x, t)",
+    "output": "u(y, x, t + dt)",
+    "snapshot_stride": 1,
+    "input_shape": [
+        208,
+        384,
+        1
+    ],
+    "n_train_pairs": 4810,
+    "n_val_pairs": 857,
+    "batch_size": 8,
+    "baseline_mse": 0.16119435957344835,
+    "baseline_mae": 0.2895675136292835,
+    "final_training_loss": 0.05056238919496536,
+    "final_validation_loss": 0.09221740812063217,
+    "final_training_mae": 0.1659706085920334,
+    "final_validation_mae": 0.2190878689289093
+}

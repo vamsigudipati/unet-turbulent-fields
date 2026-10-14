@@ -1,0 +1,361 @@
+model,seed,step,mae
+main training,0,1,0.06575481593608856
+main training,0,2,0.08152497559785843
+main training,0,3,0.08797901123762131
+main training,0,4,0.09459327906370163
+main training,0,5,0.09137361496686935
+main training,0,6,0.10474994778633118
+main training,0,7,0.13314786553382874
+main training,0,8,0.18774980306625366
+main training,0,9,0.2797424793243408
+main training,0,10,0.4390687346458435
+main training,0,11,0.7457396984100342
+main training,0,12,1.257790446281433
+main training,0,13,2.1295249462127686
+main training,0,14,3.600454807281494
+main training,0,15,6.142917633056641
+main training,0,16,10.535102844238281
+main training,0,17,17.776004791259766
+main training,0,18,30.0037899017334
+main training,0,19,50.60015106201172
+main training,0,20,84.1733169555664
+main training,0,21,144.20016479492188
+main training,0,22,240.77523803710938
+main training,0,23,401.2891540527344
+main training,0,24,668.973876953125
+main training,0,25,1101.54833984375
+main training,0,26,1892.045166015625
+main training,0,27,3170.406005859375
+main training,0,28,5208.0888671875
+main training,0,29,8628.240234375
+main training,0,30,14141.783203125
+"direct, reduced budget",0,1,0.06740129739046097
+"direct, reduced budget",0,2,0.08006640523672104
+"direct, reduced budget",0,3,0.09096068143844604
+"direct, reduced budget",0,4,0.10103009641170502
+"direct, reduced budget",0,5,0.1040370836853981
+"direct, reduced budget",0,6,0.12285343557596207
+"direct, reduced budget",0,7,0.149031400680542
+"direct, reduced budget",0,8,0.19149620831012726
+"direct, reduced budget",0,9,0.29929080605506897
+"direct, reduced budget",0,10,0.5373786091804504
+"direct, reduced budget",0,11,1.0939570665359497
+"direct, reduced budget",0,12,2.184360980987549
+"direct, reduced budget",0,13,4.348891258239746
+"direct, reduced budget",0,14,8.70145320892334
+"direct, reduced budget",0,15,17.55733299255371
+"direct, reduced budget",0,16,35.838600158691406
+"direct, reduced budget",0,17,73.86377716064453
+"direct, reduced budget",0,18,153.74598693847656
+"direct, reduced budget",0,19,321.3336181640625
+"direct, reduced budget",0,20,673.8052368164062
+"direct, reduced budget",0,21,1412.692138671875
+"direct, reduced budget",0,22,2985.3291015625
+"direct, reduced budget",0,23,6347.978515625
+"direct, reduced budget",0,24,13537.7451171875
+"direct, reduced budget",0,25,29000.83984375
+"direct, reduced budget",0,26,62033.03515625
+"direct, reduced budget",0,27,132473.421875
+"direct, reduced budget",0,28,284759.28125
+"direct, reduced budget",0,29,611673.125
+"direct, reduced budget",0,30,1316857.25
+"residual, reduced budget",0,1,0.07009931653738022
+"residual, reduced budget",0,2,0.08683236688375473
+"residual, reduced budget",0,3,0.09647750854492188
+"residual, reduced budget",0,4,0.09675563126802444
+"residual, reduced budget",0,5,0.0894056186079979
+"residual, reduced budget",0,6,0.08563938736915588
+"residual, reduced budget",0,7,0.12565822899341583
+"residual, reduced budget",0,8,0.23706695437431335
+"residual, reduced budget",0,9,0.5097858309745789
+"residual, reduced budget",0,10,0.9991306066513062
+"residual, reduced budget",0,11,1.8520313501358032
+"residual, reduced budget",0,12,3.291269302368164
+"residual, reduced budget",0,13,5.807653427124023
+"residual, reduced budget",0,14,10.316011428833008
+"residual, reduced budget",0,15,18.451475143432617
+"residual, reduced budget",0,16,33.12099838256836
+"residual, reduced budget",0,17,59.74639892578125
+"residual, reduced budget",0,18,108.06409454345703
+"residual, reduced budget",0,19,196.025634765625
+"residual, reduced budget",0,20,356.3020324707031
+"residual, reduced budget",0,21,648.5702514648438
+"residual, reduced budget",0,22,1182.505859375
+"residual, reduced budget",0,23,2159.635009765625
+"residual, reduced budget",0,24,3949.993896484375
+"residual, reduced budget",0,25,7229.40380859375
+"residual, reduced budget",0,26,13231.248046875
+"residual, reduced budget",0,27,24219.4140625
+"residual, reduced budget",0,28,44395.60546875
+"residual, reduced budget",0,29,81482.1328125
+"residual, reduced budget",0,30,149739.53125
+main training,1,1,0.06802237033843994
+main training,1,2,0.08812786638736725
+main training,1,3,0.09902077168226242
+main training,1,4,0.10768908262252808
+main training,1,5,0.10672684013843536
+main training,1,6,0.11658338457345963
+main training,1,7,0.11946123838424683
+main training,1,8,0.116562619805336
+main training,1,9,0.12166675180196762
+main training,1,10,0.12129771709442139
+main training,1,11,0.11841023713350296
+main training,1,12,0.11670529097318649
+main training,1,13,0.1131175309419632
+main training,1,14,0.12198265641927719
+main training,1,15,0.1186995878815651
+main training,1,16,0.12066356837749481
+main training,1,17,0.11090859770774841
+main training,1,18,0.11066799610853195
+main training,1,19,0.1138119176030159
+main training,1,20,0.11267857998609543
+main training,1,21,0.10848462581634521
+main training,1,22,0.11220822483301163
+main training,1,23,0.11744032055139542
+main training,1,24,0.1316886693239212
+main training,1,25,0.14128917455673218
+main training,1,26,0.14938275516033173
+main training,1,27,0.16240879893302917
+main training,1,28,0.18642465770244598
+main training,1,29,0.2051202803850174
+main training,1,30,0.22121945023536682
+"direct, reduced budget",1,1,0.06733585149049759
+"direct, reduced budget",1,2,0.08063817769289017
+"direct, reduced budget",1,3,0.09095222502946854
+"direct, reduced budget",1,4,0.09867782890796661
+"direct, reduced budget",1,5,0.0984860360622406
+"direct, reduced budget",1,6,0.10783758014440536
+"direct, reduced budget",1,7,0.11217273771762848
+"direct, reduced budget",1,8,0.16238170862197876
+"direct, reduced budget",1,9,0.3033219873905182
+"direct, reduced budget",1,10,0.453185111284256
+"direct, reduced budget",1,11,0.6563703417778015
+"direct, reduced budget",1,12,0.9390572309494019
+"direct, reduced budget",1,13,1.4093420505523682
+"direct, reduced budget",1,14,2.3070693016052246
+"direct, reduced budget",1,15,3.947298765182495
+"direct, reduced budget",1,16,6.87024450302124
+"direct, reduced budget",1,17,12.208617210388184
+"direct, reduced budget",1,18,21.91253089904785
+"direct, reduced budget",1,19,39.25487518310547
+"direct, reduced budget",1,20,71.00493621826172
+"direct, reduced budget",1,21,128.5704345703125
+"direct, reduced budget",1,22,237.33042907714844
+"direct, reduced budget",1,23,435.7359619140625
+"direct, reduced budget",1,24,813.56103515625
+"direct, reduced budget",1,25,1524.499267578125
+"direct, reduced budget",1,26,2895.70703125
+"direct, reduced budget",1,27,5447.837890625
+"direct, reduced budget",1,28,10334.328125
+"direct, reduced budget",1,29,19612.521484375
+"direct, reduced budget",1,30,37147.24609375
+"residual, reduced budget",1,1,0.06692591309547424
+"residual, reduced budget",1,2,0.08505364507436752
+"residual, reduced budget",1,3,0.10238350927829742
+"residual, reduced budget",1,4,0.10930190980434418
+"residual, reduced budget",1,5,0.1088782548904419
+"residual, reduced budget",1,6,0.11809880286455154
+"residual, reduced budget",1,7,0.12432410567998886
+"residual, reduced budget",1,8,0.1375923603773117
+"residual, reduced budget",1,9,0.1471853107213974
+"residual, reduced budget",1,10,0.16746795177459717
+"residual, reduced budget",1,11,0.2541496753692627
+"residual, reduced budget",1,12,0.3793674409389496
+"residual, reduced budget",1,13,0.5588556528091431
+"residual, reduced budget",1,14,0.8250263929367065
+"residual, reduced budget",1,15,1.1719661951065063
+"residual, reduced budget",1,16,1.672865390777588
+"residual, reduced budget",1,17,2.4373908042907715
+"residual, reduced budget",1,18,3.604140281677246
+"residual, reduced budget",1,19,5.296224594116211
+"residual, reduced budget",1,20,7.767010688781738
+"residual, reduced budget",1,21,11.337721824645996
+"residual, reduced budget",1,22,16.44130516052246
+"residual, reduced budget",1,23,23.504039764404297
+"residual, reduced budget",1,24,34.41006088256836
+"residual, reduced budget",1,25,51.410396575927734
+"residual, reduced budget",1,26,77.53496551513672
+"residual, reduced budget",1,27,117.3912582397461
+"residual, reduced budget",1,28,176.73855590820312
+"residual, reduced budget",1,29,262.88043212890625
+"residual, reduced budget",1,30,385.42364501953125
+main training,2,1,0.0638357475399971
+main training,2,2,0.07728549093008041
+main training,2,3,0.08540338277816772
+main training,2,4,0.08988698571920395
+main training,2,5,0.08578044921159744
+main training,2,6,0.08970510214567184
+main training,2,7,0.09407057613134384
+main training,2,8,0.09288779646158218
+main training,2,9,0.09354908764362335
+main training,2,10,0.08469840884208679
+main training,2,11,0.084783636033535
+main training,2,12,0.08174076676368713
+main training,2,13,0.07685483247041702
+main training,2,14,0.08838534355163574
+main training,2,15,0.08639267832040787
+main training,2,16,0.08659425377845764
+main training,2,17,0.07723980396986008
+main training,2,18,0.08130671828985214
+main training,2,19,0.09791211038827896
+main training,2,20,0.11388927698135376
+main training,2,21,0.1229066476225853
+main training,2,22,0.14317116141319275
+main training,2,23,0.16522035002708435
+main training,2,24,0.19647999107837677
+main training,2,25,0.2542259097099304
+main training,2,26,0.2898244559764862
+main training,2,27,0.34419089555740356
+main training,2,28,0.40241411328315735
+main training,2,29,0.4683522582054138
+main training,2,30,0.5671847462654114
+"direct, reduced budget",2,1,0.06799305975437164
+"direct, reduced budget",2,2,0.08234947174787521
+"direct, reduced budget",2,3,0.09603254497051239
+"direct, reduced budget",2,4,0.10541313886642456
+"direct, reduced budget",2,5,0.10705503076314926
+"direct, reduced budget",2,6,0.11717874556779861
+"direct, reduced budget",2,7,0.1197226494550705
+"direct, reduced budget",2,8,0.1171986311674118
+"direct, reduced budget",2,9,0.12014918774366379
+"direct, reduced budget",2,10,0.11838080734014511
+"direct, reduced budget",2,11,0.11448205262422562
+"direct, reduced budget",2,12,0.11134080588817596
+"direct, reduced budget",2,13,0.10676904767751694
+"direct, reduced budget",2,14,0.11861161887645721
+"direct, reduced budget",2,15,0.11536557972431183
+"direct, reduced budget",2,16,0.1278735250234604
+"direct, reduced budget",2,17,0.12433397769927979
+"direct, reduced budget",2,18,0.1392626166343689
+"direct, reduced budget",2,19,0.1578725427389145
+"direct, reduced budget",2,20,0.17454776167869568
+"direct, reduced budget",2,21,0.19123978912830353
+"direct, reduced budget",2,22,0.22534731030464172
+"direct, reduced budget",2,23,0.26494577527046204
+"direct, reduced budget",2,24,0.32666805386543274
+"direct, reduced budget",2,25,0.370156466960907
+"direct, reduced budget",2,26,0.4345301687717438
+"direct, reduced budget",2,27,0.512289822101593
+"direct, reduced budget",2,28,0.6214125752449036
+"direct, reduced budget",2,29,0.7315798401832581
+"direct, reduced budget",2,30,0.8485874533653259
+"residual, reduced budget",2,1,0.06768889725208282
+"residual, reduced budget",2,2,0.07599132508039474
+"residual, reduced budget",2,3,0.08634817600250244
+"residual, reduced budget",2,4,0.09174550324678421
+"residual, reduced budget",2,5,0.11611059308052063
+"residual, reduced budget",2,6,0.18175935745239258
+"residual, reduced budget",2,7,0.3200756013393402
+"residual, reduced budget",2,8,0.5516952872276306
+"residual, reduced budget",2,9,0.9773256182670593
+"residual, reduced budget",2,10,1.705482840538025
+"residual, reduced budget",2,11,2.8969922065734863
+"residual, reduced budget",2,12,4.867371082305908
+"residual, reduced budget",2,13,8.230813980102539
+"residual, reduced budget",2,14,14.02312183380127
+"residual, reduced budget",2,15,24.00551414489746
+"residual, reduced budget",2,16,41.15006637573242
+"residual, reduced budget",2,17,70.56627655029297
+"residual, reduced budget",2,18,121.09347534179688
+"residual, reduced budget",2,19,207.8782196044922
+"residual, reduced budget",2,20,356.8080749511719
+"residual, reduced budget",2,21,612.1661987304688
+"residual, reduced budget",2,22,1049.7501220703125
+"residual, reduced budget",2,23,1799.795654296875
+"residual, reduced budget",2,24,3085.838134765625
+"residual, reduced budget",2,25,5289.11279296875
+"residual, reduced budget",2,26,9057.6484375
+"residual, reduced budget",2,27,15502.61328125
+"residual, reduced budget",2,28,26544.1171875
+"residual, reduced budget",2,29,45442.62109375
+"residual, reduced budget",2,30,77802.2890625
+persistence,0,1,0.08735238760709763
+persistence,0,2,0.08658266812562943
+persistence,0,3,0.09770720452070236
+persistence,0,4,0.09358889609575272
+persistence,0,5,0.09538459777832031
+persistence,0,6,0.0944339856505394
+persistence,0,7,0.08857867121696472
+persistence,0,8,0.09223077446222305
+persistence,0,9,0.08972638845443726
+persistence,0,10,0.08669734001159668
+persistence,0,11,0.09418658167123795
+persistence,0,12,0.09535955637693405
+persistence,0,13,0.08881059288978577
+persistence,0,14,0.09867554903030396
+persistence,0,15,0.10647772997617722
+persistence,0,16,0.10851915180683136
+persistence,0,17,0.08477847278118134
+persistence,0,18,0.09799537807703018
+persistence,0,19,0.10471249371767044
+persistence,0,20,0.0909222662448883
+persistence,0,21,0.09430396556854248
+persistence,0,22,0.10749731957912445
+persistence,0,23,0.08493538945913315
+persistence,0,24,0.09716100990772247
+persistence,0,25,0.11097346246242523
+persistence,0,26,0.09991632401943207
+persistence,0,27,0.09911756217479706
+persistence,0,28,0.10536177456378937
+persistence,0,29,0.09868722409009933
+persistence,0,30,0.11410994082689285
+persistence,1,1,0.08735238760709763
+persistence,1,2,0.08658266812562943
+persistence,1,3,0.09770720452070236
+persistence,1,4,0.09358889609575272
+persistence,1,5,0.09538459777832031
+persistence,1,6,0.0944339856505394
+persistence,1,7,0.08857867121696472
+persistence,1,8,0.09223077446222305
+persistence,1,9,0.08972638845443726
+persistence,1,10,0.08669734001159668
+persistence,1,11,0.09418658167123795
+persistence,1,12,0.09535955637693405
+persistence,1,13,0.08881059288978577
+persistence,1,14,0.09867554903030396
+persistence,1,15,0.10647772997617722
+persistence,1,16,0.10851915180683136
+persistence,1,17,0.08477847278118134
+persistence,1,18,0.09799537807703018
+persistence,1,19,0.10471249371767044
+persistence,1,20,0.0909222662448883
+persistence,1,21,0.09430396556854248
+persistence,1,22,0.10749731957912445
+persistence,1,23,0.08493538945913315
+persistence,1,24,0.09716100990772247
+persistence,1,25,0.11097346246242523
+persistence,1,26,0.09991632401943207
+persistence,1,27,0.09911756217479706
+persistence,1,28,0.10536177456378937
+persistence,1,29,0.09868722409009933
+persistence,1,30,0.11410994082689285
+persistence,2,1,0.08735238760709763
+persistence,2,2,0.08658266812562943
+persistence,2,3,0.09770720452070236
+persistence,2,4,0.09358889609575272
+persistence,2,5,0.09538459777832031
+persistence,2,6,0.0944339856505394
+persistence,2,7,0.08857867121696472
+persistence,2,8,0.09223077446222305
+persistence,2,9,0.08972638845443726
+persistence,2,10,0.08669734001159668
+persistence,2,11,0.09418658167123795
+persistence,2,12,0.09535955637693405
+persistence,2,13,0.08881059288978577
+persistence,2,14,0.09867554903030396
+persistence,2,15,0.10647772997617722
+persistence,2,16,0.10851915180683136
+persistence,2,17,0.08477847278118134
+persistence,2,18,0.09799537807703018
+persistence,2,19,0.10471249371767044
+persistence,2,20,0.0909222662448883
+persistence,2,21,0.09430396556854248
+persistence,2,22,0.10749731957912445
+persistence,2,23,0.08493538945913315
+persistence,2,24,0.09716100990772247
+persistence,2,25,0.11097346246242523
+persistence,2,26,0.09991632401943207
+persistence,2,27,0.09911756217479706
+persistence,2,28,0.10536177456378937
+persistence,2,29,0.09868722409009933
+persistence,2,30,0.11410994082689285
