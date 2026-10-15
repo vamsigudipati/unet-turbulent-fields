@@ -7803,7 +7803,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Stage-3-%E2%80%94-U-Net-temporal-evolution-from-TFRecords">Stage 3 — U-Net temporal evolution from TFRecords<a class="anchor-link" href="#Stage-3-%E2%80%94-U-Net-temporal-evolution-from-TFRecords">¶</a></h1><p><strong>Vamsi Gudipati</strong></p>
-<p>The same U-Net as Stage 1, now asked to advance the field by one snapshot, u(t) → u(t + 1), trained by streaming the TFRecords of Stage 2 with <code>tf.data</code>. At one step it beats persistence (next field = current field), and I ran the notebook's five exercises (snapshot stride, network width, residual learning, longer rollouts, shuffle buffer and shard count), added a training animation and repeated every training with three seeds. The 30-step rollouts leave the data for every seed; Stage 4 measures why, against persistence and against the mean velocity profile.</p>
+<p>The same U-Net as Stage 1, now asked to advance the field by one snapshot, u(t) → u(t + 1), trained by streaming the TFRecords of Stage 2 with <code>tf.data</code>. At one step it beats persistence (next field = current field), and I ran the notebook's five experiments (snapshot stride, network width, residual learning, longer rollouts, shuffle buffer and shard count), added a training animation and repeated every training with three seeds. The 30-step rollouts leave the data for every seed; Stage 4 measures why, against persistence and against the mean velocity profile.</p>
 <p>Portfolio page: <a href="https://vamsigudipati.github.io/unet-turbulent-fields.html">https://vamsigudipati.github.io/unet-turbulent-fields.html</a></p>
 </div>
 </div>
@@ -60865,7 +60865,7 @@ Step 5: predicted snapshot 30005, MAE = 0.091374
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="17.-Exercises">17. Exercises<a class="anchor-link" href="#17.-Exercises">¶</a></h1><h2 id="Exercise-1-%E2%80%94-Change-the-snapshot-stride">Exercise 1 — Change the snapshot stride<a class="anchor-link" href="#Exercise-1-%E2%80%94-Change-the-snapshot-stride">¶</a></h2><p>Try:</p>
+<h1 id="17.-Experiments">17. Experiments<a class="anchor-link" href="#17.-Experiments">¶</a></h1><h2 id="Experiment-1-%E2%80%94-Change-the-snapshot-stride">Experiment 1 — Change the snapshot stride<a class="anchor-link" href="#Experiment-1-%E2%80%94-Change-the-snapshot-stride">¶</a></h2><p>Try:</p>
 <div class="highlight"><pre><span></span><span class="n">snapshot_stride</span> <span class="o">=</span> <span class="mi">1</span>   <span class="c1"># (Stage 2)</span>
 <span class="n">snapshot_stride</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">snapshot_stride</span> <span class="o">=</span> <span class="mi">5</span>
@@ -60873,14 +60873,14 @@ Step 5: predicted snapshot 30005, MAE = 0.091374
 <p>Rebuild the TFRecords in Stage 2 for each value and retrain. How does a larger
 <code>dt</code> affect the persistence baseline and the U-Net's advantage over it?</p>
 <hr/>
-<h2 id="Exercise-2-%E2%80%94-Change-the-U-Net-size">Exercise 2 — Change the U-Net size<a class="anchor-link" href="#Exercise-2-%E2%80%94-Change-the-U-Net-size">¶</a></h2><p>Try:</p>
+<h2 id="Experiment-2-%E2%80%94-Change-the-U-Net-size">Experiment 2 — Change the U-Net size<a class="anchor-link" href="#Experiment-2-%E2%80%94-Change-the-U-Net-size">¶</a></h2><p>Try:</p>
 <div class="highlight"><pre><span></span><span class="n">base_filters</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="n">base_filters</span> <span class="o">=</span> <span class="mi">16</span>
 <span class="n">base_filters</span> <span class="o">=</span> <span class="mi">32</span>
 </pre></div>
 <p>Compare validation loss and validation MAE against the persistence baseline.</p>
 <hr/>
-<h2 id="Exercise-3-%E2%80%94-Residual-(delta)-learning">Exercise 3 — Residual (delta) learning<a class="anchor-link" href="#Exercise-3-%E2%80%94-Residual-(delta)-learning">¶</a></h2><p>The persistence baseline is already a decent predictor for small <code>dt</code>. A natural
+<h2 id="Experiment-3-%E2%80%94-Residual-(delta)-learning">Experiment 3 — Residual (delta) learning<a class="anchor-link" href="#Experiment-3-%E2%80%94-Residual-(delta)-learning">¶</a></h2><p>The persistence baseline is already a decent predictor for small <code>dt</code>. A natural
 improvement is to train the U-Net to predict only the <strong>change</strong> in the field:</p>
 <div class="highlight"><pre><span></span>U-Net(u(t)) ≈ u(t + dt) - u(t)
 </pre></div>
@@ -60891,11 +60891,11 @@ improvement is to train the U-Net to predict only the <strong>change</strong> in
 <code>target_field - input_field</code>, and adjust Section 15/16 accordingly to add the
 prediction back to the input. Compare against direct prediction.</p>
 <hr/>
-<h2 id="Exercise-4-%E2%80%94-Rollout-stability">Exercise 4 — Rollout stability<a class="anchor-link" href="#Exercise-4-%E2%80%94-Rollout-stability">¶</a></h2><p>Increase <code>n_steps</code> in Section 16 and plot the error growth curve for more steps.
+<h2 id="Experiment-4-%E2%80%94-Rollout-stability">Experiment 4 — Rollout stability<a class="anchor-link" href="#Experiment-4-%E2%80%94-Rollout-stability">¶</a></h2><p>Increase <code>n_steps</code> in Section 16 and plot the error growth curve for more steps.
 Does the error grow smoothly, or does it blow up after a certain number of steps?
-Try Exercise 3 (residual learning) and see whether it makes the rollout more stable.</p>
+Try Experiment 3 (residual learning) and see whether it makes the rollout more stable.</p>
 <hr/>
-<h2 id="Exercise-5-%E2%80%94-Shard-count-and-shuffle-buffer">Exercise 5 — Shard count and shuffle buffer<a class="anchor-link" href="#Exercise-5-%E2%80%94-Shard-count-and-shuffle-buffer">¶</a></h2><p>In Stage 2, try a different <code>train_num_shards</code>, and in this notebook try a
+<h2 id="Experiment-5-%E2%80%94-Shard-count-and-shuffle-buffer">Experiment 5 — Shard count and shuffle buffer<a class="anchor-link" href="#Experiment-5-%E2%80%94-Shard-count-and-shuffle-buffer">¶</a></h2><p>In Stage 2, try a different <code>train_num_shards</code>, and in this notebook try a
 different <code>shuffle_buffer</code> in <code>build_temporal_dataset()</code>. How do these choices affect
 training speed and how "shuffled" the batches actually look?</p>
 </div>
@@ -60908,8 +60908,8 @@ training speed and how "shuffled" the batches actually look?</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Exercise-solutions">Exercise solutions<a class="anchor-link" href="#Exercise-solutions">¶</a></h1><p>I solve the five exercises of Section 17 with this notebook's own pipeline (<code>build_temporal_dataset</code>, <code>make_parse_fn</code>, <code>normalize_pair</code>), model builder (<code>create_unet_temporal_model</code>), training settings (Adam 1e-4 with clipnorm 1, MSE, batch 8, early stopping patience 8, learning-rate halving patience 4) and rollout helpers (<code>read_velocity_plane_from_h5</code>, <code>pad_field_to_multiple</code>, <code>rollout_temporal_prediction</code>, <code>same_z</code>). Errors are validation MAE in normalised units unless stated.</p>
-<p><strong>Reduced budget (once for all exercises).</strong> One full training takes about a quarter of an hour, so every exercise model gets at most 5 epochs of 300 steps (2,400 pairs per epoch) on the Stage 2 TFRecords and is compared with a direct-prediction U-Net trained with the <strong>same</strong> reduced budget (<code>base_filters=16</code>), not with the fully trained main model. Exercise 1 needs pairs at other time strides, which the TFRecords do not hold, so it builds pairs in memory from the planes of every sixth z-plane.</p>
+<h1 id="Experiment-solutions">Experiment solutions<a class="anchor-link" href="#Experiment-solutions">¶</a></h1><p>I solve the five experiments of Section 17 with this notebook's own pipeline (<code>build_temporal_dataset</code>, <code>make_parse_fn</code>, <code>normalize_pair</code>), model builder (<code>create_unet_temporal_model</code>), training settings (Adam 1e-4 with clipnorm 1, MSE, batch 8, early stopping patience 8, learning-rate halving patience 4) and rollout helpers (<code>read_velocity_plane_from_h5</code>, <code>pad_field_to_multiple</code>, <code>rollout_temporal_prediction</code>, <code>same_z</code>). Errors are validation MAE in normalised units unless stated.</p>
+<p><strong>Reduced budget (once for all experiments).</strong> One full training takes about a quarter of an hour, so every experiment model gets at most 5 epochs of 300 steps (2,400 pairs per epoch) on the Stage 2 TFRecords and is compared with a direct-prediction U-Net trained with the <strong>same</strong> reduced budget (<code>base_filters=16</code>), not with the fully trained main model. Experiment 1 needs pairs at other time strides, which the TFRecords do not hold, so it builds pairs in memory from the planes of every sixth z-plane.</p>
 </div>
 </div>
 </div>
@@ -60982,7 +60982,7 @@ training speed and how "shuffled" the batches actually look?</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Exercise-1-%E2%80%94-solution">Exercise 1 — solution<a class="anchor-link" href="#Exercise-1-%E2%80%94-solution">¶</a></h2><p>Instead of rebuilding the 3.62 GB of TFRecords three times I build an equivalent in-memory dataset on a subset: the planes of every sixth z-plane (10 of 60), padded and normalised exactly as in Stage 2, paired at snapshot strides 1, 2 and 5 within each z-plane, with an 85/15 split by pair. For each stride I train a 16-filter U-Net with the reduced budget and compare it with persistence on the same pairs.</p>
+<h2 id="Experiment-1-%E2%80%94-solution">Experiment 1 — solution<a class="anchor-link" href="#Experiment-1-%E2%80%94-solution">¶</a></h2><p>Instead of rebuilding the 3.62 GB of TFRecords three times I build an equivalent in-memory dataset on a subset: the planes of every sixth z-plane (10 of 60), padded and normalised exactly as in Stage 2, paired at snapshot strides 1, 2 and 5 within each z-plane, with an 85/15 split by pair. For each stride I train a 16-filter U-Net with the reduced budget and compare it with persistence on the same pairs.</p>
 </div>
 </div>
 </div>
@@ -61055,7 +61055,7 @@ Result (Exercise 1): validation MAE U-Net / persistence (normalised): stride 1: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Exercise-2-%E2%80%94-solution">Exercise 2 — solution<a class="anchor-link" href="#Exercise-2-%E2%80%94-solution">¶</a></h2><p>U-Nets with 8 and 32 base filters (16 is the reference trained above), on the Stage 2 TFRecords, reduced budget.</p>
+<h2 id="Experiment-2-%E2%80%94-solution">Experiment 2 — solution<a class="anchor-link" href="#Experiment-2-%E2%80%94-solution">¶</a></h2><p>U-Nets with 8 and 32 base filters (16 is the reference trained above), on the Stage 2 TFRecords, reduced budget.</p>
 </div>
 </div>
 </div>
@@ -61103,7 +61103,7 @@ Result (Exercise 2): validation MAE 8 filters (485,673 params, 161 s): 0.2111; 1
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Exercise-3-%E2%80%94-solution">Exercise 3 — solution<a class="anchor-link" href="#Exercise-3-%E2%80%94-solution">¶</a></h2><p>Residual learning: an extra <code>map</code> after <code>normalize_pair</code> turns the target into <code>target - input</code>, and the prediction is reconstructed as <code>input + predicted delta</code>. Same 16-filter U-Net and reduced budget as the direct reference.</p>
+<h2 id="Experiment-3-%E2%80%94-solution">Experiment 3 — solution<a class="anchor-link" href="#Experiment-3-%E2%80%94-solution">¶</a></h2><p>Residual learning: an extra <code>map</code> after <code>normalize_pair</code> turns the target into <code>target - input</code>, and the prediction is reconstructed as <code>input + predicted delta</code>. Same 16-filter U-Net and reduced budget as the direct reference.</p>
 </div>
 </div>
 </div>
@@ -61146,7 +61146,7 @@ Result (Exercise 2): validation MAE 8 filters (485,673 params, 161 s): 0.2111; 1
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Exercise-4-%E2%80%94-solution">Exercise 4 — solution<a class="anchor-link" href="#Exercise-4-%E2%80%94-solution">¶</a></h2><p>Rollouts of 30 steps from the start of the z-plane used in Section 16, for the fully trained main model (<code>unet_model</code>), the reduced-budget direct and residual models, and persistence, with the MAE (physical units) against the true planes at every step.</p>
+<h2 id="Experiment-4-%E2%80%94-solution">Experiment 4 — solution<a class="anchor-link" href="#Experiment-4-%E2%80%94-solution">¶</a></h2><p>Rollouts of 30 steps from the start of the z-plane used in Section 16, for the fully trained main model (<code>unet_model</code>), the reduced-budget direct and residual models, and persistence, with the MAE (physical units) against the true planes at every step.</p>
 </div>
 </div>
 </div>
@@ -61202,7 +61202,7 @@ Result (Exercise 2): validation MAE 8 filters (485,673 params, 161 s): 0.2111; 1
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Exercise-5-%E2%80%94-solution">Exercise 5 — solution<a class="anchor-link" href="#Exercise-5-%E2%80%94-solution">¶</a></h2><p>Two measurements without retraining. (a) <strong>Shuffle quality:</strong> for shuffle buffers of 0 (none), 200 (the notebook's) and 2,000 records (three configurations), the training pipeline is read with the pair metadata (<code>snapshot_t</code>, <code>z_label</code>) and the mean absolute difference of <code>snapshot_t</code> between consecutive records is reported (large = well mixed), together with the number of distinct z-planes per batch of 8. (b) <strong>Shard count:</strong> a fixed set of 1,600 training records is rewritten into 2 and into 16 shards in a scratch folder and read back with the notebook's interleave pattern; the read throughput (records per second) is reported.</p>
+<h2 id="Experiment-5-%E2%80%94-solution">Experiment 5 — solution<a class="anchor-link" href="#Experiment-5-%E2%80%94-solution">¶</a></h2><p>Two measurements without retraining. (a) <strong>Shuffle quality:</strong> for shuffle buffers of 0 (none), 200 (the notebook's) and 2,000 records (three configurations), the training pipeline is read with the pair metadata (<code>snapshot_t</code>, <code>z_label</code>) and the mean absolute difference of <code>snapshot_t</code> between consecutive records is reported (large = well mixed), together with the number of distinct z-planes per batch of 8. (b) <strong>Shard count:</strong> a fixed set of 1,600 training records is rewritten into 2 and into 16 shards in a scratch folder and read back with the notebook's interleave pattern; the read throughput (records per second) is reported.</p>
 </div>
 </div>
 </div>
@@ -61289,7 +61289,7 @@ Result (Exercise 5): mean |Δ snapshot| between consecutive records for shuffle 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Summary-of-the-exercise-solutions">Summary of the exercise solutions<a class="anchor-link" href="#Summary-of-the-exercise-solutions">¶</a></h2><p>The numbers are those printed in the <code>Result</code> lines above (all exercise models with the reduced budget stated at the top); the tables and figures are in the exercises results folder.</p>
+<h2 id="Summary-of-the-experiment-solutions">Summary of the experiment solutions<a class="anchor-link" href="#Summary-of-the-experiment-solutions">¶</a></h2><p>The numbers are those printed in the <code>Result</code> lines above (all experiment models with the reduced budget stated at the top); the tables and figures are in the experiments results folder.</p>
 </div>
 </div>
 </div>
@@ -61400,7 +61400,7 @@ Result (Exercise 5): mean |Δ snapshot| between consecutive records for shuffle 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Three-seed-repeats">Three-seed repeats<a class="anchor-link" href="#Three-seed-repeats">¶</a></h1><p>I repeat every training with the seeds 1 and 2; seed 0 is the run above. For the main training of Section 11 the seed sets TensorFlow's global seed before the model is built (the notebook sets seed 0 in its import cell) and the shuffle of the training stream (<code>build_temporal_dataset_s</code> is <code>build_temporal_dataset</code> with the seed as an argument; the notebook's own builder shuffles with seed 0). I evaluate the seed models as in Sections 14 and 16 and save them next to the main model. The exercise trainings are repeated the same way with their reduced budget; the data, the split and the budget stay the same. Each row is one training; the summary gives the mean and the standard deviation over the three seeds. The <code>seeds_*.csv</code> tables and <code>seeds_summary.png</code> go to the exercises results folder.</p>
+<h1 id="Three-seed-repeats">Three-seed repeats<a class="anchor-link" href="#Three-seed-repeats">¶</a></h1><p>I repeat every training with the seeds 1 and 2; seed 0 is the run above. For the main training of Section 11 the seed sets TensorFlow's global seed before the model is built (the notebook sets seed 0 in its import cell) and the shuffle of the training stream (<code>build_temporal_dataset_s</code> is <code>build_temporal_dataset</code> with the seed as an argument; the notebook's own builder shuffles with seed 0). I evaluate the seed models as in Sections 14 and 16 and save them next to the main model. The experiment trainings are repeated the same way with their reduced budget; the data, the split and the budget stay the same. Each row is one training; the summary gives the mean and the standard deviation over the three seeds. The <code>seeds_*.csv</code> tables and <code>seeds_summary.png</code> go to the experiments results folder.</p>
 </div>
 </div>
 </div>

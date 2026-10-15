@@ -13,7 +13,7 @@ Portfolio page: https://vamsigudipati.github.io/unet-turbulent-fields.html
 | `notebooks/03_unet_temporal_evolution.ipynb` | Stage 3 — U-Net temporal evolution from TFRecords | `results/03_unet_temporal_evolution/` | `models/03_unet_temporal_evolution/` | `animations/03_*` |
 | `notebooks/04_baselines_and_rollout.ipynb` | Stage 4 — Baselines and rollout | `results/04_baselines_and_rollout/` | — | — |
 
-Each notebook is also exported as HTML next to it, with all outputs. In `results/`, the `exercises/` folder of Stages 1 and 3 holds the tables (CSV) and figures (PNG) of the exercises and of the three-seed repeats, and `figures/` the architecture drawings; Stage 4 writes its tables and figures directly into its results folder. `models/` holds the trained networks as Keras files (the per-epoch checkpoints stay out of git); `animations/` holds the training videos and their final frames.
+Each notebook is also exported as HTML next to it, with all outputs. In `results/`, the `exercises/` folder of Stages 1 and 3 holds the tables (CSV) and figures (PNG) of the experiments and of the three-seed repeats, and `figures/` the architecture drawings; Stage 4 writes its tables and figures directly into its results folder. `models/` holds the trained networks as Keras files (the per-epoch checkpoints stay out of git); `animations/` holds the training videos and their final frames.
 
 ## Data
 
